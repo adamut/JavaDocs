@@ -167,7 +167,56 @@ public class MyImplementedList<E> {
         }
     }
 
-   // public Iterator<E> iterator() {
+    public Iterator<E> iterator() {
+        return new MyImplementedIterator();
+    }
+
+    private class MyImplementedIterator implements Iterator<E>
+
+    {
+        private int size;
+        private int cursor;
+        private Object[] elementDataIterator;
+
+        public MyImplementedIterator() {
+            this.size = MyImplementedList.this.size();
+            this.cursor = 0;
+            elementDataIterator = (E[]) new Object[size];
+            for (int i = 0; i < size; i++) {
+                elementDataIterator[i] = MyImplementedList.this.elementData[i];
+            }
+        }
+
+        public boolean hasNext() {
+            if (cursor < size)
+                return this.cursor < size;
+            else {
+                MyImplementedList.this.elementData = elementDataIterator;
+                MyImplementedList.this.size = size;
+                return false;
+            }
+
+        }
+
+        public E next() {
+            if (this.hasNext()) {
+                int current = cursor;
+                cursor++;
+                return (E) elementDataIterator[current];
+            } else
+                return null;
+        }
+
+        public void remove() {
+            int i = cursor;
+            size--;
+            while (i < size) {
+                elementDataIterator[i] = elementDataIterator[i + 1];
+                i++;
+            }
+        }
+    }
+    // public Iterator<E> iterator() {
        /* Iterator<E> it = new Iterator<E>() {
             MyImplementedList<E> listToIterate;
             int currentIndex = 0;

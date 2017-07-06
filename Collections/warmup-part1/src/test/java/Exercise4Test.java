@@ -78,23 +78,27 @@ public class Exercise4Test {
     @Test
     public void testIsEmptyMethodOverIntegerList() {
         // TODO use Iterator and remove the classic for
-       // Iterator<Integer> iterator = testingIntegerValues.iterator();
+        Iterator<Integer> iterator = testingIntegerValues.iterator();
 
 //        for (int i = 0; i < testingIntegerValues.size(); i++) {
 //            testingIntegerValues.remove(i);
 //        }
+        while(iterator.hasNext()){
+            iterator.remove();
+        }
 
-//        Assert.assertTrue(testingIntegerValues.isEmpty());
+
+        Assert.assertTrue(testingIntegerValues.isEmpty());
     }
 
     @Test
     public void testIndexOfMethodOverStringList() {
-//        Assert.assertTrue(testingStringValues.indexOf("Testing ") == 0);
+        Assert.assertTrue(testingStringValues.indexOf("Testing ") == 0);
     }
 
     @Test
     public void testLastIndexOfMethodOverStringList() {
-//        Assert.assertTrue(testingStringValues.lastIndexOf("Testing ") == 4);
+        Assert.assertTrue(testingStringValues.lastIndexOf("Testing ") == 4);
     }
 
     @Test
