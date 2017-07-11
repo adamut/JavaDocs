@@ -1,0 +1,26 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="14" author="adamut.cosmin">
+
+        <createTable tableName="ZTH2017_PEOPLE-COSMIN">
+            <column name="pers_id" type="NUMBER(6)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="first_name" type="VARCHAR2(40)"/>
+            <column name="last_name" type="VARCHAR2(40)"/>
+            <column name="email" type="VARCHAR2(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone_number" type="VARCHAR2(25)"/>
+            <column name="address_id" type="NUMBER(6)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>
