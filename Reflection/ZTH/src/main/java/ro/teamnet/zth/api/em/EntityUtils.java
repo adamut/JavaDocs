@@ -67,16 +67,16 @@ public class EntityUtils {
             return null;
         if (value instanceof BigDecimal) {
             BigDecimal b = (BigDecimal) value;
-            if (wantedType.getClass().equals(Integer.TYPE)) {
+            if (wantedType.equals(Integer.class)) {
                 return b.intValue();
             }
-            if (wantedType.getClass().equals(Long.TYPE)) {
+            if (wantedType.equals(Long.class)) {
                 return b.longValue();
             }
-            if (wantedType.getClass().equals(Float.TYPE)) {
+            if (wantedType.equals(Float.class)) {
                 return b.floatValue();
             }
-            if (wantedType.getClass().equals(Double.TYPE)) {
+            if (wantedType.equals(Double.class)) {
                 return b.doubleValue();
             }
         }

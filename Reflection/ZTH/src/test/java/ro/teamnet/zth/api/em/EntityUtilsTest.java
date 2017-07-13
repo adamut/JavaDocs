@@ -28,7 +28,8 @@ public class EntityUtilsTest {
     }
     @Test
     public void testCastFromSqlType() {
+        BigDecimal a = BigDecimal.valueOf(300);
 
-      //  assertEquals(,EntityUtils.castFromSqlType(BigDecimal,Integer));
+        assertEquals(a.intValue(),EntityUtils.castFromSqlType(a,Integer.class));
     }
 }
