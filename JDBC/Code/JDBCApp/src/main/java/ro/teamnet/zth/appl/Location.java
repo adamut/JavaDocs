@@ -1,4 +1,4 @@
-package ro.teamnet.zth.appl.domain;
+package ro.teamnet.zth.appl;
 
 import ro.teamnet.zth.api.annotations.Column;
 import ro.teamnet.zth.api.annotations.Id;

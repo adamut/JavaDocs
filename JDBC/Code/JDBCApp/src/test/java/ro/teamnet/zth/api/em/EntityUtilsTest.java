@@ -2,9 +2,7 @@ package ro.teamnet.zth.api.em;
 
 import org.junit.Test;
 import ro.teamnet.zth.api.annotations.Column;
-import ro.teamnet.zth.api.em.ColumnInfo;
-import ro.teamnet.zth.api.em.EntityUtils;
-import ro.teamnet.zth.appl.domain.Department;
+import ro.teamnet.zth.appl.Department;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
 
